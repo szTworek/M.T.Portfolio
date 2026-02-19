@@ -72,7 +72,7 @@ function TextWave({ texts, interval = 3000 }) {
 
 function Home() {
   return (
-    <section id="home" className="min-h-[100vh] flex items-center justify-end snap-start px-4 lg:px-0 lg:pr-16">
+    <section id="home" className="min-h-[100vh] flex items-center justify-end px-4 lg:px-0 lg:pr-16">
       <div className="text-right">
         <h1 className="font-normal text-white opacity-60 leading-none" style={{ fontFamily: 'Genos', fontWeight: '700' }}>
           <span className="text-[40px] lg:text-[150px] block mb-[-20px]">MAGDALENA</span>

@@ -14,7 +14,7 @@ const portfolioItems = [
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="min-h-screen snap-start py-16 px-4 lg:px-0 lg:pr-16">
+    <section id="portfolio" className="min-h-screen py-16 px-4 lg:px-0 lg:pr-16">
       <div className="flex flex-col items-end">
         <h2
           className="text-[100px] lg:text-[100px] font-bold text-white opacity-40 leading-none text-right mb-8 lg:mb-16"

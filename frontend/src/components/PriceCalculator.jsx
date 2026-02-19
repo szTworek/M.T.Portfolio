@@ -102,7 +102,7 @@ function PriceCalculator() {
   const selectStyles = "w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white text-left focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent transition-all duration-300 cursor-pointer [&>option]:bg-black [&>option]:text-white"
 
   return (
-    <section id="price-calculator" className="min-h-[calc(100vh-4rem)] lg:min-h-[100vh] flex items-center justify-center lg:justify-end snap-start px-4 lg:px-0 lg:pr-16">
+    <section id="price-calculator" className="min-h-[calc(100vh-4rem)] lg:min-h-[100vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
       <div className="max-w-xl w-full text-right">
         <h2
           className="text-5xl font-bold mb-10 text-white opacity-80"

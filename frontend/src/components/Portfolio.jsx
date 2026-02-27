@@ -1,15 +1,15 @@
-import img1 from '../portfolio/IMG_5591.jpeg'
-import img2 from '../portfolio/IMG_0305-min.jpeg'
-import img3 from '../portfolio/IMG_6016.jpeg'
+import img1 from '../portfolio/IMG_5591.jpg'
+import img2 from '../portfolio/IMG_0305-min.jpg'
+import img3 from '../portfolio/IMG_6016.jpg'
 import img4 from '../portfolio/IMG_1041_1166x861-min.png'
-import img5 from '../portfolio/fea177b1-999c-4f73-a5b8-dec23d4d5206.jpg'
+// import img5 from '../portfolio/fea177b1-999c-4f73-a5b8-dec23d4d5206.jpg'
 
 const portfolioItems = [
   { id: 1, src: img1, title: 'Porsche 911', description: 'Acrylic, 50 × 60 cm' },
   { id: 2, src: img2, title: 'Porsche Cayman', description: 'Oil, 50 × 60 cm' },
   { id: 3, src: img3, title: 'Porsche 911', description: 'Acrylic, 50 × 60 cm' },
   { id: 4, src: img4, title: 'Mitsubischi Lancer Evo ', description: 'Acrylic, 50 × 60 cm' },
-  { id: 5, src: img5, title: 'Mazda RX-7', description: 'Acrylic, 50 × 60 cm' },
+  // { id: 5, src: img5, title: 'Mazda RX-7', description: 'Acrylic, 50 × 60 cm' },
 ]
 
 function Portfolio() {
@@ -43,13 +43,13 @@ function Portfolio() {
                 />
               </div>
               <h3
-                className="text-2xl text-white opacity-60 mt-4"
+                className="text-3xl text-white opacity-80 mt-4"
                 style={{ fontFamily: 'Genos', fontWeight: '700' }}
               >
                 {item.title}
               </h3>
               <p
-                className="text-sm text-white opacity-40"
+                className="text-xl text-white opacity-60"
                 style={{ fontFamily: 'Genos' }}
               >
                 {item.description}

@@ -2,27 +2,21 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const DIMENSIONS = {
-  '30x40': { label: '30 × 40 cm', baseHours: 20 },
-  '40x50': { label: '40 × 50 cm', baseHours: 30 },
-  '50x60': { label: '50 × 60 cm', baseHours: 40 },
-  '50x70': { label: '50 × 70 cm', baseHours: 50 },
-  '60x80': { label: '60 × 80 cm', baseHours: 70 },
-  '70x100': { label: '70 × 100 cm', baseHours: 100 },
+  '20x30': { label: '30 × 40 cm', baseHours: 48 },
+  '40x50': { label: '40 × 50 cm', baseHours: 100 },
+  '70x90': { label: '70 × 100 cm', baseHours: 200 },
   'custom': { label: 'Custom', baseHours: null },
 }
 
 const TECHNIQUES = {
-  acrylic: { label: 'Acrylic', multiplier: 1.0 },
-  oil: { label: 'Oil', multiplier: 1.3 },
+  acrylic: { label: 'Acrylic', multiplier: 0.6 },
+  oil: { label: 'Oil', multiplier: 1.0 },
   other: { label: 'Other', multiplier: null },
 }
 
 const STYLES = {
-  abstract: { label: 'Abstract', multiplier: 0.6 },
-  impressionism: { label: 'Impressionism', multiplier: 0.8 },
+  semi_realism: { label: 'Semi-realism', multiplier: 0.8 },
   realism: { label: 'Realism', multiplier: 1.0 },
-  portrait: { label: 'Portrait', multiplier: 1.2 },
-  hyperrealism: { label: 'Hyperrealism', multiplier: 2.0 },
   other: { label: 'Other', multiplier: null },
 }
 
@@ -102,10 +96,10 @@ function PriceCalculator() {
   const selectStyles = "w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white text-left focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent transition-all duration-300 cursor-pointer [&>option]:bg-black [&>option]:text-white"
 
   return (
-    <section id="price-calculator" className="min-h-[calc(100vh-4rem)] lg:min-h-[100vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
-      <div className="max-w-xl w-full text-right">
+    <section id="price-calculator" className="min-h-[calc(100vh-4rem)] lg:min-h-[70vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
+      <div className="lg: max-w-xl w-full text-right">
         <h2
-          className="text-5xl font-bold mb-10 text-white opacity-80"
+          className="text-5xl lg:text-[80px] mb-8 pt-20 font-bold text-white opacity-40 leading-none text-right"
           style={{ fontFamily: 'Genos' }}
         >
           Price Estimator

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu as MenuIcon, X } from 'lucide-react'
+import {Instagram, Mail, Menu as MenuIcon, Phone, X} from 'lucide-react'
 import logo from '../assets/logo.png'
 
 const menuItems = [
@@ -78,7 +78,8 @@ function Menu() {
 
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex w-[20%] fixed left-0 top-0 h-screen bg-black/30 backdrop-blur-sm flex-col items-center py-20">
-        <div>
+        <div className={"flex justify-between flex-col h-full"}>
+          <div>
           <img src={logo} alt="Logo" className="w-32 mb-8" />
 
           <nav className="flex flex-col gap-4 text-white text-2xl" style={{ fontFamily: 'Genos' }}>
@@ -93,6 +94,29 @@ function Menu() {
               </a>
             ))}
           </nav>
+          </div>
+          <div className={"flex items-center flex-row justify-between"}>
+            <a
+                href="https://www.instagram.com/sk8erboi_______"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+            >
+              <Instagram size={28} strokeWidth={2}/>
+            </a>
+            <a
+                href="mailto:magdalenatecza@interia.pl"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+            >
+              <Mail size={28} strokeWidth={2}/>
+            </a>
+            <a
+                href="tel:+48734446427"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+            >
+              <Phone size={28} strokeWidth={2}/>
+            </a>
+          </div>
         </div>
       </aside>
     </>

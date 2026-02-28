@@ -22,16 +22,16 @@ function Contact() {
   const inputStyles = "w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent transition-all duration-300"
 
   return (
-    <section id="contact" className="min-h-[calc(100vh-4rem)] lg:min-h-[100vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
-      <div className="max-w-2xl w-full">
+    <section id="contact" className="min-h-[calc(100vh-4rem)] lg:min-h-[70vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
+      <div className="lg:max-w-2xl w-full">
         <h2
-          className="text-5xl font-bold mb-10 text-white opacity-80 text-right"
+          className="text-5xl lg:text-[80px] mb-8 pt-20 font-bold text-white opacity-40 leading-none text-right"
           style={{ fontFamily: 'Genos' }}
         >
           Contact
         </h2>
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-end ">
+        <div className="flex  lg:flex-row gap-8 lg:gap-12 justify-end ">
           {/* Contact Info */}
           <div className="flex flex-col justify-center space-y-6 pb-6 border-b lg:pb-0 lg:border-b-0 lg:pl-12 lg:border-l border-white/20">
             <a
@@ -50,7 +50,7 @@ function Contact() {
             </a>
 
             <a
-              href="mailto:email@example.com"
+              href="mailto:magdalenatecza@interia.pl"
               className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
               <Mail size={28} strokeWidth={2} />
@@ -63,7 +63,7 @@ function Contact() {
             </a>
 
             <a
-              href="tel:+48123456789"
+              href="tel:+48734446427"
               className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
               <Phone size={28} strokeWidth={2} />

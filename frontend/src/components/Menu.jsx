@@ -102,7 +102,7 @@ function Menu() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Instagram size={28} strokeWidth={1}/>
+              <Instagram size={28} strokeWidth={1.75}/>
             </a>
             <a
                 href="https://www.facebook.com/magdatecza29"
@@ -110,19 +110,19 @@ function Menu() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Facebook size={28} strokeWidth={1}/>
+              <Facebook size={28} strokeWidth={1.75}/>
             </a>
             <a
                 href="mailto:magdalenatecza@interia.pl"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Mail size={28} strokeWidth={1}/>
+              <Mail size={28} strokeWidth={1.75}/>
             </a>
             <a
                 href="tel:+48734446427"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Phone size={28} strokeWidth={1}/>
+              <Phone size={28} strokeWidth={1.75}/>
             </a>
           </div>
         </div>

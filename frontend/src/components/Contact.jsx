@@ -25,7 +25,7 @@ function Contact() {
     <section id="contact" className="min-h-[calc(100vh-4rem)] lg:min-h-[70vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
       <div className="lg:max-w-2xl w-full">
         <h2
-          className="text-6xl lg:text-[80px] mb-8 pt-20 font-bold text-white opacity-60 leading-none text-right"
+          className="text-6xl lg:text-[80px] mb-8 font-bold text-white opacity-60 leading-none text-right"
           style={{ fontFamily: 'Genos' }}
         >
           Contact
@@ -41,7 +41,7 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Instagram size={28} strokeWidth={1}/>
+              <Instagram size={28} strokeWidth={1.75}/>
               <span
                   className="text-xl font-bold"
                   style={{fontFamily: 'Genos'}}
@@ -56,7 +56,7 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Facebook size={28} strokeWidth={1}/>
+              <Facebook size={28} strokeWidth={1.75}/>
               <span
                   className="text-xl font-bold"
                   style={{fontFamily: 'Genos'}}
@@ -69,7 +69,7 @@ function Contact() {
                 href="mailto:magdalenatecza@interia.pl"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Mail size={28} strokeWidth={1}/>
+              <Mail size={28} strokeWidth={1.75}/>
               <span
                   className="text-xl font-bold"
                   style={{fontFamily: 'Genos'}}
@@ -82,7 +82,7 @@ function Contact() {
                 href="tel:+48734446427"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Phone size={28} strokeWidth={1}/>
+              <Phone size={28} strokeWidth={1.75}/>
               <span
                   className="text-xl font-bold"
                   style={{fontFamily: 'Genos'}}

@@ -47,7 +47,7 @@ function Portfolio() {
                   <img
                       src={item.src}
                       alt={item.title}
-                      loading="lazy"
+
                       className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110"
                   />
                 </div>

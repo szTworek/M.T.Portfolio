@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const DIMENSIONS = {
   '20x30': '20 × 30 cm',
   '40x50': '40 × 50 cm',
-  '70x90': '70 × 90 cm',
+  '50x70': '50 × 70 cm',
   'custom': 'Custom',
 }
 
@@ -70,7 +70,7 @@ function PriceCalculator() {
     if (!dimension || !option) return
 
     if (dimension === 'custom') {
-      setResult({ isCustom: true, customFields: ['wymiarów'] })
+      setResult({ isCustom: true, customFields: ['dimensions'] })
       return
     }
 
@@ -89,7 +89,7 @@ function PriceCalculator() {
 
   const isFormComplete = dimension && option
 
-  const selectStyles = "w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white text-left focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent transition-all duration-300 cursor-pointer [&>option]:bg-black [&>option]:text-white"
+  const selectStyles = "w-full bg-black/30 backdrop-blur-lg border border-white/10 rounded-lg px-4 py-3 text-white text-left focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-transparent transition-all duration-300 cursor-pointer [&>option]:bg-black [&>option]:text-white"
 
   return (
       <section id="price-calculator" className="min-h-[calc(100vh-4rem)] lg:min-h-[70vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
@@ -102,10 +102,10 @@ function PriceCalculator() {
           </h2>
 
           <div className="space-y-6">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 text-xl">
               <label
                   htmlFor="dimensions"
-                  className="w-28 text-lg font-medium text-white text-left shrink-0"
+                  className="w-28 font-medium text-white text-left shrink-0"
                   style={{ fontFamily: 'Genos' }}
               >
                 Dimensions

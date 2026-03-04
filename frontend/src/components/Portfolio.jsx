@@ -13,68 +13,62 @@ const portfolioItems = [
   { id: 5, src: img4, title: 'Mitsubischi Lancer Evo ', description: 'Acrylic, 50 × 60 cm' },
 ]
 
-function PortfolioItem({ item }) {
-  const { ref, inView } = useInView({
-    threshold: 0.8,
-    triggerOnce: true,
+function Portfolio() {
+  const { ref: textRef, inView: textInView } = useInView({
+    threshold: 0.6,
+    triggerOnce: false,
   });
 
+  // Hook dla drugiego tekstu (nagłówka z literami)
+  const { ref: headingRef, inView: headingInView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
   return (
-      <div
-          ref={ref}
-          className={`text-right transition-opacity duration-2000 ease-in-out ${
-              inView ? 'opacity-100' : 'opacity-0'
-          }`}
-      >
-        <div className="overflow-hidden shadow-4xl rounded-xl">
-          <img
-              src={item.src}
-              alt={item.title}
-              loading="lazy"
-              className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110"
-          />
-        </div>
-        <h3
-            className="text-4xl text-white opacity-80 mt-4"
+    <section id="portfolio" className="min-h-screen py-16 px-4 lg:px-0 lg:pr-16">
+      <div className="flex flex-col items-end ">
+        <h2
+            className="text-6xl lg:text-[100px]  pt-20 font-bold text-white opacity-60 leading-none text-right mb-8 lg:mb-16"
+            style={{fontFamily: 'Genos', fontWeight: '700'}}
+        >PORTFOLIO</h2>
+        <p
+            className="text-xl lg:text-[30px] w-[full] lg:w-[50vw] font-bold text-white text-right opacity-80 leading-none mb-8 mt-8 lg:mb-16"
             style={{fontFamily: 'Genos', fontWeight: '700'}}
         >
-          {item.title}
-        </h3>
-        <p
-            className="text-3xl text-white opacity-80"
-            style={{fontFamily: 'Genos'}}
-        >
-          {item.description}
+          My love for cars has also been a huge part of my life since I can remember. That’s how these two worlds got
+          combined into one. Capturing cars in my paintings has become my favorite way for unwinding and I’m hoping to
+          do it even more in the future.
         </p>
-      </div>
-  );
-}
 
-function Portfolio() {
-  return (
-      <section id="portfolio" className="min-h-screen py-16 px-4 lg:px-0 lg:pr-16">
-        <div className="flex flex-col items-end ">
-          <h2
-              className="text-6xl lg:text-[100px]  pt-20 font-bold text-white opacity-60 leading-none text-right mb-8 lg:mb-16"
-              style={{fontFamily: 'Genos', fontWeight: '700'}}
-          >PORTFOLIO</h2>
-          <p
-              className="text-xl lg:text-[30px] w-[full] lg:w-[50vw] font-bold text-white text-right opacity-80 leading-none mb-8 mt-8 lg:mb-16"
-              style={{fontFamily: 'Genos', fontWeight: '700'}}
-          >
-            My love for cars has also been a huge part of my life since I can remember. That’s how these two worlds got
-            combined into one. Capturing cars in my paintings has become my favorite way for unwinding and I’m hoping to
-            do it even more in the future.
-          </p>
-
-          <div className="w-full lg:w-1/2 flex flex-col gap-20 lg:gap-12 mb-20">
-            {portfolioItems.map((item) => (
-                <PortfolioItem key={item.id} item={item} />
-            ))}
-          </div>
+        <div className="w-full lg:w-1/2 flex flex-col gap-20 lg:gap-12 mb-20">
+          {portfolioItems.map((item) => (
+              <div key={item.id} className="text-right">
+                <div className="overflow-hidden shadow-4xl rounded-xl">
+                  <img
+                      src={item.src}
+                      alt={item.title}
+                      loading="lazy"
+                      className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110"
+                  />
+                </div>
+                <h3
+                    className="text-4xl text-white opacity-80 mt-4"
+                    style={{fontFamily: 'Genos', fontWeight: '700'}}
+                >
+                  {item.title}
+                </h3>
+                <p
+                    className="text-3xl text-white opacity-80"
+                    style={{fontFamily: 'Genos'}}
+                >
+                  {item.description}
+                </p>
+              </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
   )
 }
 
-export default Portfolio;
+export default Portfolio

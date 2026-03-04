@@ -47,9 +47,9 @@ function Menu() {
     <>
       {/* Mobile Header */}
       <header className="lg:hidden fixed top-0 left-0 w-full h-16 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-between px-4">
-        <img src={logo} alt="Logo" className="h-10" />
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        <a href={'#home'}><img src={logo} alt="Logo" className="h-10"/></a>
+          <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white p-2"
           aria-label="Toggle menu"
         >
@@ -80,7 +80,7 @@ function Menu() {
       <aside className="hidden lg:flex w-[20%] fixed left-0 top-0 h-screen bg-black/30 backdrop-blur-sm flex-col items-center py-20">
         <div className={"flex justify-between flex-col h-full"}>
           <div>
-          <img src={logo} alt="Logo" className="w-32 mb-8" />
+            <a href={'#home'}><img src={logo} alt="Logo" className="w-32 mb-8" /></a>
 
           <nav className="flex flex-col gap-4 text-white text-2xl" style={{ fontFamily: 'Genos' }}>
             {menuItems.map(({ id, label }) => (

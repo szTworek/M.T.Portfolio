@@ -28,7 +28,7 @@ function Portfolio() {
     <section id="portfolio" className="min-h-screen py-16 px-4 lg:px-0 lg:pr-16">
       <div className="flex flex-col items-end ">
         <h2
-            className="text-5xl lg:text-[100px]  pt-20 font-bold text-white opacity-40 leading-none text-right mb-8 lg:mb-16"
+            className="text-6xl lg:text-[100px]  pt-20 font-bold text-white opacity-60 leading-none text-right mb-8 lg:mb-16"
             style={{fontFamily: 'Genos', fontWeight: '700'}}
         >PORTFOLIO</h2>
         <p
@@ -40,7 +40,7 @@ function Portfolio() {
           do it even more in the future.
         </p>
 
-        <div className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-12 mb-20">
+        <div className="w-full lg:w-1/2 flex flex-col gap-20 lg:gap-12 mb-20">
           {portfolioItems.map((item) => (
               <div key={item.id} className="text-right">
                 <div className="overflow-hidden shadow-4xl rounded-xl">

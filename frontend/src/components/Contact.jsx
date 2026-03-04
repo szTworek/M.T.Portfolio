@@ -25,7 +25,7 @@ function Contact() {
     <section id="contact" className="min-h-[calc(100vh-4rem)] lg:min-h-[70vh] flex items-center justify-center lg:justify-end px-4 lg:px-0 lg:pr-16">
       <div className="lg:max-w-2xl w-full">
         <h2
-          className="text-5xl lg:text-[80px] mb-8 pt-20 font-bold text-white opacity-40 leading-none text-right"
+          className="text-6xl lg:text-[80px] mb-8 pt-20 font-bold text-white opacity-60 leading-none text-right"
           style={{ fontFamily: 'Genos' }}
         >
           Contact

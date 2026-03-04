@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Instagram, Mail, Phone } from 'lucide-react'
+import { Instagram, Facebook, Mail, Phone } from 'lucide-react'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -33,43 +33,59 @@ function Contact() {
 
         <div className="flex  lg:flex-row gap-8 lg:gap-12 justify-end ">
           {/* Contact Info */}
-          <div className="flex flex-col justify-center space-y-6 pb-6 border-b lg:pb-0 lg:border-b-0 lg:pl-12 lg:border-l border-white/20">
+          <div
+              className="flex flex-col justify-center space-y-6 pb-6 border-b lg:pb-0 lg:border-b-0 lg:pl-12 lg:border-l border-white/20">
             <a
-              href="https://www.instagram.com/sk8erboi_______"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+                href="https://www.instagram.com/sk8erboi_______"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Instagram size={28} strokeWidth={2} />
+              <Instagram size={28} strokeWidth={1}/>
               <span
-                className="text-xl font-bold"
-                style={{ fontFamily: 'Genos' }}
+                  className="text-xl font-bold"
+                  style={{fontFamily: 'Genos'}}
               >
                 @sk8erboi_______
               </span>
             </a>
 
             <a
-              href="mailto:magdalenatecza@interia.pl"
-              className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+                href="https://www.facebook.com/magdatecza29"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Mail size={28} strokeWidth={2} />
+              <Facebook size={28} strokeWidth={1}/>
               <span
-                className="text-xl font-bold"
-                style={{ fontFamily: 'Genos' }}
+                  className="text-xl font-bold"
+                  style={{fontFamily: 'Genos'}}
+              >
+                Magdalena Tęcza
+              </span>
+            </a>
+
+            <a
+                href="mailto:magdalenatecza@interia.pl"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+            >
+              <Mail size={28} strokeWidth={1}/>
+              <span
+                  className="text-xl font-bold"
+                  style={{fontFamily: 'Genos'}}
               >
                 magdalenatecza@interia.pl
               </span>
             </a>
 
             <a
-              href="tel:+48734446427"
-              className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+                href="tel:+48734446427"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Phone size={28} strokeWidth={2} />
+              <Phone size={28} strokeWidth={1}/>
               <span
-                className="text-xl font-bold"
-                style={{ fontFamily: 'Genos' }}
+                  className="text-xl font-bold"
+                  style={{fontFamily: 'Genos'}}
               >
                 +48 734 446 427
               </span>

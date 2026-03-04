@@ -52,13 +52,13 @@ function Portfolio() {
                   />
                 </div>
                 <h3
-                    className="text-3xl text-white opacity-80 mt-4"
+                    className="text-4xl text-white opacity-80 mt-4"
                     style={{fontFamily: 'Genos', fontWeight: '700'}}
                 >
                   {item.title}
                 </h3>
                 <p
-                    className="text-xl text-white opacity-60"
+                    className="text-3xl text-white opacity-80"
                     style={{fontFamily: 'Genos'}}
                 >
                   {item.description}

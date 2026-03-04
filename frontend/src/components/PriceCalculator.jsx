@@ -15,15 +15,17 @@ const OPTIONS = [
 ]
 
 const PRICING_DATA = {
-  '20x30-semi_acrylic': { hours: 30, pricePLN: 1200, priceEUR: 290 },
-  '20x30-realism_acrylic': { hours: 30, pricePLN: 1200, priceEUR: 290 },
-  '20x30-realism_oil': { hours: 40, pricePLN: 1600, priceEUR: 390 },
-  '40x50-semi_acrylic': { hours: 60, pricePLN: 2400, priceEUR: 465 },
-  '40x50-realism_acrylic': { hours: 60, pricePLN: 2400, priceEUR: 600 },
-  '40x50-realism_oil': { hours: 80, pricePLN: 3200, priceEUR: 770 },
-  '70x90-semi_acrylic': { hours: 100, pricePLN: 4000, priceEUR: 960 },
-  '70x90-realism_acrylic': { hours: 140, pricePLN: 5600, priceEUR: 1350 },
-  '70x90-realism_oil': { hours: 160, pricePLN: 6400, priceEUR: 1530 },
+  "20x30-semi_acrylic": { "hours": 30, "pricePLN": 500, "priceUSD": 140 },
+  "20x30-realism_acrylic": { "hours": 40, "pricePLN": 700, "priceUSD": 190 },
+  "20x30-realism_oil": { "hours": 40, "pricePLN": 800, "priceUSD": 220 },
+
+  "40x50-semi_acrylic": { "hours": 60, "pricePLN": 700, "priceUSD": 190 },
+  "40x50-realism_acrylic": { "hours": 70, "pricePLN": 900, "priceUSD": 250 },
+  "40x50-realism_oil": { "hours": 70, "pricePLN": 1000, "priceUSD": 270 },
+
+  "50x70-semi_acrylic": { "hours": 100, "pricePLN": 1000, "priceUSD": 270 },
+  "50x70-realism_acrylic": { "hours": 120, "pricePLN": 1200, "priceUSD": 330 },
+  "50x70-realism_oil": { "hours": 120, "pricePLN": 1500, "priceUSD": 410 }
 }
 
 const resultVariants = {
@@ -81,7 +83,7 @@ function PriceCalculator() {
       isCustom: false,
       hours: pricing.hours,
       pricePLN: pricing.pricePLN,
-      priceEUR: pricing.priceEUR,
+      priceUSD: pricing.priceUSD,
     })
   }
 
@@ -128,7 +130,7 @@ function PriceCalculator() {
                   <button
                       key={opt.id}
                       onClick={() => handleOptionChange(opt.id)}
-                      className={`py-4 px-2 rounded-lg border transition-all duration-300 ${
+                      className={`py-4 px-2 rounded-lg border backdrop-blur-lg  transition-all duration-300 ${
                           option === opt.id
                               ? 'bg-white/20 border-white text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                               : 'bg-black/30 border-white/10 text-white hover:border-white/30 hover:bg-black/40'
@@ -203,7 +205,7 @@ function PriceCalculator() {
                                 className="text-3xl font-bold text-white"
                                 style={{ fontFamily: 'Genos' }}
                             >
-                              {result.priceEUR.toLocaleString('pl-PL')} <span className="text-xl text-white/60">EUR</span>
+                              {result.priceUSD.toLocaleString('pl-PL')} <span className="text-xl text-white/60">USD</span>
                             </p>
                           </div>
                           <p

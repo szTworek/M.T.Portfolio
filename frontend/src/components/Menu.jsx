@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import {Instagram, Mail, Menu as MenuIcon, Phone, X} from 'lucide-react'
+import {Facebook, Instagram, Mail, Menu as MenuIcon, Phone, X} from 'lucide-react'
 import logo from '../assets/logo.png'
 
 const menuItems = [
@@ -95,26 +95,34 @@ function Menu() {
             ))}
           </nav>
           </div>
-          <div className={"flex items-center flex-row justify-between"}>
+          <div className={"flex items-center flex-row justify-between gap-4"}>
             <a
                 href="https://www.instagram.com/sk8erboi_______"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Instagram size={28} strokeWidth={2}/>
+              <Instagram size={28} strokeWidth={1}/>
+            </a>
+            <a
+                href="https://www.facebook.com/magdatecza29"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
+            >
+              <Facebook size={28} strokeWidth={1}/>
             </a>
             <a
                 href="mailto:magdalenatecza@interia.pl"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Mail size={28} strokeWidth={2}/>
+              <Mail size={28} strokeWidth={1}/>
             </a>
             <a
                 href="tel:+48734446427"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
             >
-              <Phone size={28} strokeWidth={2}/>
+              <Phone size={28} strokeWidth={1}/>
             </a>
           </div>
         </div>

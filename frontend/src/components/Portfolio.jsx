@@ -6,11 +6,11 @@ import img5 from '../portfolio/IMG_0689.jpg'
 import { useInView } from 'react-intersection-observer';
 
 const portfolioItems = [
-  { id: 2, src: img2, title: 'Porsche Cayman', description: 'Oil, 50 × 60 cm' },
-  { id: 3, src: img3, title: 'Porsche 911', description: 'Acrylic, 50 × 60 cm' },
-  { id: 4, src: img5, title: 'Mazda RX-7', description: 'Acrylic, 50 × 60 cm' },
-  { id: 1, src: img1, title: 'Porsche 911', description: 'Acrylic, 50 × 60 cm' },
-  { id: 5, src: img4, title: 'Mitsubischi Lancer Evo ', description: 'Acrylic, 50 × 60 cm' },
+  { id: 2, src: img2, title: 'Porsche Cayman', description: 'Oil, 40 ×50 cm', alt: 'hand-painted picture of a Porsche Cayman' },
+  { id: 3, src: img3, title: 'Porsche 911', description: 'Acrylic, 30 × 40 cm', alt: 'hand-painted picture of a Porsche 911' },
+  { id: 4, src: img5, title: 'Mazda RX-7', description: 'Acrylic, 50 × 60 cm', alt: 'hand-painted picture of a Mazda RX-7' },
+  { id: 1, src: img1, title: 'Porsche 911', description: 'Acrylic, 40 × 50 cm', alt: 'hand-painted picture of a Porsche 911' },
+  { id: 5, src: img4, title: 'Mitsubishi Lancer Evo ', description: 'Acrylic, 70 × 100 cm', alt: 'hand-painted picture of a Mitsubishi Lancer Evo' },
 ]
 
 function Portfolio() {
@@ -46,7 +46,7 @@ function Portfolio() {
                 <div className="overflow-hidden shadow-4xl rounded-xl">
                   <img
                       src={item.src}
-                      alt={item.title}
+                      alt={item.alt}
 
                       className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110"
                   />

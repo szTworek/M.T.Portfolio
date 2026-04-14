@@ -36,7 +36,7 @@ function Contact() {
           <div
               className="flex flex-col justify-center space-y-6 pb-6 border-b lg:pb-0 lg:border-b-0 lg:pl-12 lg:border-l border-white/20">
             <a
-                href="https://www.instagram.com/sk8erboi_______"
+                href="https://www.instagram.com/magdalenatecza.art/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"
@@ -46,7 +46,7 @@ function Contact() {
                   className="text-xl font-bold"
                   style={{fontFamily: 'Genos'}}
               >
-                @sk8erboi_______
+                @magdalenatecza.art
               </span>
             </a>
 

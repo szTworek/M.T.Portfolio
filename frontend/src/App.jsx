@@ -1,5 +1,5 @@
 import './App.css'
-import backgroundImage from './assets/rainbowcanvas.png'
+import backgroundImage from './assets/background.jpg'
 import Menu from './components/Menu'
 import Content from './components/Content'
 

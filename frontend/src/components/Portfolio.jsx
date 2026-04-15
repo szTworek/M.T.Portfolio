@@ -1,16 +1,16 @@
-import img1 from '../portfolio/IMG_5591.jpg'
-import img2 from '../portfolio/IMG_0687.jpg'
-import img3 from '../portfolio/IMG_6016.jpg'
-import img4 from '../portfolio/IMG_1041_1166x861-min.png'
-import img5 from '../portfolio/IMG_0689.jpg'
+import img1 from '../portfolio/991_2.jpg'
+import img2 from '../portfolio/Cayman.jpg'
+import img3 from '../portfolio/991_1.jpg'
+import img4 from '../portfolio/Mitsubishi.png'
+import img5 from '../portfolio/RX-7.jpg'
 import { useInView } from 'react-intersection-observer';
 
 const portfolioItems = [
-  { id: 2, src: img2, title: 'Porsche Cayman', description: 'Oil, 40 ×50 cm', alt: 'hand-painted picture of a Porsche Cayman' },
-  { id: 3, src: img3, title: 'Porsche 911', description: 'Acrylic, 30 × 40 cm', alt: 'hand-painted picture of a Porsche 911' },
-  { id: 4, src: img5, title: 'Mazda RX-7', description: 'Acrylic, 50 × 60 cm', alt: 'hand-painted picture of a Mazda RX-7' },
-  { id: 1, src: img1, title: 'Porsche 911', description: 'Acrylic, 40 × 50 cm', alt: 'hand-painted picture of a Porsche 911' },
-  { id: 5, src: img4, title: 'Mitsubishi Lancer Evo ', description: 'Acrylic, 70 × 100 cm', alt: 'hand-painted picture of a Mitsubishi Lancer Evo' },
+  { id: 2, src: img2, title: 'Porsche Cayman', description: 'Oil, 40 ×50 cm', alt: 'Hand-painted oil picture of a Porsche Cayman by Magdalena Tęcza' },
+  { id: 3, src: img3, title: 'Porsche 911', description: 'Acrylic, 30 × 40 cm', alt: 'Hand-painted acrylic picture of a Porsche 911 by Magdalena Tęcza' },
+  { id: 4, src: img5, title: 'Mazda RX-7', description: 'Acrylic, 50 × 60 cm', alt: 'Hand-painted acrylic picture of a Mazda RX-7 by Magdalena Tęcza' },
+  { id: 1, src: img1, title: 'Porsche 911', description: 'Acrylic, 40 × 50 cm', alt: 'Hand-painted acrylic picture of a Porsche 911 by Magdalena Tęcza' },
+  { id: 5, src: img4, title: 'Mitsubishi Lancer Evo', description: 'Acrylic, 70 × 100 cm', alt: 'Hand-painted acrylic picture of a Mitsubishi Lancer Evo by Magdalena Tęcza' }
 ]
 
 function Portfolio() {

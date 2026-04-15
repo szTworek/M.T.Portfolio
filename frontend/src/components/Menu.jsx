@@ -47,7 +47,7 @@ function Menu() {
     <>
       {/* Mobile Header */}
       <header className="lg:hidden fixed top-0 left-0 w-full h-16 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-between px-4">
-        <a href={'#home'}><img src={logo} alt="Logo" className="h-10"/></a>
+        <a href={'#home'}><img src={logo} alt="Magdalena Tęcza Logo" className="h-10"/></a>
           <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white p-2"
@@ -80,7 +80,7 @@ function Menu() {
       <aside className="hidden lg:flex w-[20%] fixed left-0 top-0 h-screen bg-black/30 backdrop-blur-sm flex-col items-center py-20">
         <div className={"flex justify-between flex-col h-full"}>
           <div>
-            <a href={'#home'}><img src={logo} alt="Logo" className="w-32 mb-8" /></a>
+            <a href={'#home'}><img src={logo} alt="Magdalena Tęcza Logo" className="w-32 mb-8" /></a>
 
           <nav className="flex flex-col gap-4 text-white text-2xl" style={{ fontFamily: 'Genos' }}>
             {menuItems.map(({ id, label }) => (
@@ -97,7 +97,7 @@ function Menu() {
           </div>
           <div className={"flex items-center flex-row justify-between gap-4"}>
             <a
-                href="https://www.instagram.com/sk8erboi_______"
+                href="https://www.instagram.com/magdalenatecza.art"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-white hover:text-white/70 transition-colors duration-300"

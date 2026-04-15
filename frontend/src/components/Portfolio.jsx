@@ -3,37 +3,61 @@ import img2 from '../portfolio/Cayman.jpg'
 import img3 from '../portfolio/991_1.jpg'
 import img4 from '../portfolio/Mitsubishi.png'
 import img5 from '../portfolio/RX-7.jpg'
-import { useInView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer'
 
 const portfolioItems = [
-  { id: 2, src: img2, title: 'Porsche Cayman', description: 'Oil, 40 ×50 cm', alt: 'Hand-painted oil picture of a Porsche Cayman by Magdalena Tęcza' },
+  { id: 2, src: img2, title: 'Porsche Cayman', description: 'Oil, 40 × 50 cm', alt: 'Hand-painted oil picture of a Porsche Cayman by Magdalena Tęcza' },
   { id: 3, src: img3, title: 'Porsche 911', description: 'Acrylic, 30 × 40 cm', alt: 'Hand-painted acrylic picture of a Porsche 911 by Magdalena Tęcza' },
   { id: 4, src: img5, title: 'Mazda RX-7', description: 'Acrylic, 50 × 60 cm', alt: 'Hand-painted acrylic picture of a Mazda RX-7 by Magdalena Tęcza' },
   { id: 1, src: img1, title: 'Porsche 911', description: 'Acrylic, 40 × 50 cm', alt: 'Hand-painted acrylic picture of a Porsche 911 by Magdalena Tęcza' },
   { id: 5, src: img4, title: 'Mitsubishi Lancer Evo', description: 'Acrylic, 70 × 100 cm', alt: 'Hand-painted acrylic picture of a Mitsubishi Lancer Evo by Magdalena Tęcza' }
 ]
 
-function Portfolio() {
-  const { ref: textRef, inView: textInView } = useInView({
-    threshold: 0.6,
-    triggerOnce: false,
-  });
+function PortfolioCard({ item }) {
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
 
-  // Hook dla drugiego tekstu (nagłówka z literami)
-  const { ref: headingRef, inView: headingInView } = useInView({
-    threshold: 0.5,
-    triggerOnce: false,
-  });
+  return (
+    <div
+      ref={ref}
+      className={
+        'text-right transition-[opacity,transform] duration-700 ease-out motion-reduce:duration-150 ' +
+        (inView ? 'opacity-100 translate-y-0 ' : 'opacity-0 translate-y-8 ') +
+        'motion-reduce:opacity-100 motion-reduce:translate-y-0'
+      }
+    >
+      <div className="overflow-hidden shadow-4xl rounded-xl">
+        <img
+          src={item.src}
+          alt={item.alt}
+          className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110"
+        />
+      </div>
+      <h3
+        className="text-4xl text-white opacity-80 mt-4"
+        style={{ fontFamily: 'Genos', fontWeight: '700' }}
+      >
+        {item.title}
+      </h3>
+      <p className="text-3xl text-white opacity-80" style={{ fontFamily: 'Genos' }}>
+        {item.description}
+      </p>
+    </div>
+  )
+}
+
+function Portfolio() {
   return (
     <section id="portfolio" className="min-h-screen py-16 px-4 lg:px-0 lg:pr-16">
       <div className="flex flex-col items-end ">
         <h2
-            className="text-6xl lg:text-[100px]  pt-20 font-bold text-white opacity-60 leading-none text-right mb-8 lg:mb-16"
-            style={{fontFamily: 'Genos', fontWeight: '700'}}
-        >PORTFOLIO</h2>
+          className="text-6xl lg:text-[100px]  pt-20 font-bold text-white opacity-60 leading-none text-right mb-8 lg:mb-16"
+          style={{ fontFamily: 'Genos', fontWeight: '700' }}
+        >
+          PORTFOLIO
+        </h2>
         <p
-            className="text-xl lg:text-[30px] w-[full] lg:w-[50vw] font-bold text-white text-right opacity-80 leading-none mb-8 mt-8 lg:mb-16"
-            style={{fontFamily: 'Genos', fontWeight: '700'}}
+          className="text-xl lg:text-[30px] w-[full] lg:w-[50vw] font-bold text-white text-right opacity-80 leading-none mb-8 mt-8 lg:mb-16"
+          style={{ fontFamily: 'Genos', fontWeight: '700' }}
         >
           My love for cars has also been a huge part of my life since I can remember. That’s how these two worlds got
           combined into one. Capturing cars in my paintings has become my favorite way for unwinding and I’m hoping to
@@ -42,28 +66,7 @@ function Portfolio() {
 
         <div className="w-full lg:w-1/2 flex flex-col gap-20 lg:gap-12 mb-20">
           {portfolioItems.map((item) => (
-              <div key={item.id} className="text-right">
-                <div className="overflow-hidden shadow-4xl rounded-xl">
-                  <img
-                      src={item.src}
-                      alt={item.alt}
-
-                      className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110"
-                  />
-                </div>
-                <h3
-                    className="text-4xl text-white opacity-80 mt-4"
-                    style={{fontFamily: 'Genos', fontWeight: '700'}}
-                >
-                  {item.title}
-                </h3>
-                <p
-                    className="text-3xl text-white opacity-80"
-                    style={{fontFamily: 'Genos'}}
-                >
-                  {item.description}
-                </p>
-              </div>
+            <PortfolioCard key={item.id} item={item} />
           ))}
         </div>
       </div>

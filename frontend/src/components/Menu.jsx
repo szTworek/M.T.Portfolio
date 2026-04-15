@@ -14,10 +14,8 @@ function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
-    const container = document.getElementById('content-container')
-    if (!container) return
-
-    const sections = menuItems.map(item => document.getElementById(item.id)).filter(Boolean)
+    const sections = menuItems.map((item) => document.getElementById(item.id)).filter(Boolean)
+    if (sections.length === 0) return
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,13 +26,13 @@ function Menu() {
         })
       },
       {
-        root: container,
+        root: null,
         rootMargin: '-50% 0px -50% 0px',
-        threshold: 0
+        threshold: 0,
       }
     )
 
-    sections.forEach(section => observer.observe(section))
+    sections.forEach((section) => observer.observe(section))
 
     return () => observer.disconnect()
   }, [])
